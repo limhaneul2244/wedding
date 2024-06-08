@@ -41,13 +41,13 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./Public/imgs/img00.jpg" alt="">
+          <img src="./public/imgs/img00.jpg" alt="">
         </div>
         <div class="swiper-slide">
-          <img src="./Public/imgs/img00.jpg" alt="">
+          <img src="./public/imgs/img00.jpg" alt="">
         </div>
         <div class="swiper-slide">
-          <img src="./Public/imgs/img00.jpg" alt="">
+          <img src="./public/imgs/img00.jpg" alt="">
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -104,12 +104,12 @@
     </div>
 
     <div class="infor">
-      <img src="./Public/imgs/wedding00.jpg" alt="하승우,임하늘">
+      <img src="./public/imgs/wedding00.jpg" alt="하승우,임하늘">
 
       <div>
         <div class="familyInfo">
-          <span>ooo ㆍ</span>
-          <span>ooo</span>
+          <span>박문재 ㆍ</span>
+          <span>조재홍</span>
           <span>의 손자</span>
           <span>승우</span>
         </div>
@@ -243,21 +243,15 @@
       <p class="subText">갤러리</p>
     </div>
 
-    <div class="galleryWrap">
-      <div class="galleryContainer">
-        <div>
-          <div class="galleryFlexContainer transition">
-            <div class="galleryFlex reverse">
-              <div class="gridItem1">
-                <img src="./Public/imgs/gallery00.jpg" alt="">
-                <img src="./Public/imgs/gallery00.jpg" alt="">
-              </div>
-              <div class="gridItem">
-                <img src="./Public/imgs/gallery01.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="gallery-grid-container">
+      <div class="gallery-grid grid2" id="galleryGrid">
+        <!-- JavaScript를 통해 이미지가 추가될 부분 -->
+      </div>
+    </div>
+    <div class="gallery-more-button-wrap">
+      <div class="gallery-more-button">
+        <div></div>
+        <span>사진 더 보기</span>
       </div>
     </div>
   </article>
@@ -366,7 +360,7 @@
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>

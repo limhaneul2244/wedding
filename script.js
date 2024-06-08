@@ -1,3 +1,6 @@
+import { images } from './imagesData.js';
+const galleryGrid = document.getElementById('galleryGrid');
+
 //메인 슬라이드 swiper
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
@@ -46,3 +49,24 @@ function updateCountdown() {
 // 1초마다 카운트다운 갱신
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();  // 페이지 로드 시 즉시 업데이트
+
+//갤러리 이미지 반복
+for (let i = 0; i < images.length; i++) {
+  const img = images[i];
+  const gridItem = document.createElement('div');
+  gridItem.className = 'grid-item';
+  gridItem.style.gridArea = img.gridArea;
+
+  const itemDiv = document.createElement('div');
+  itemDiv.className = 'item';
+  itemDiv.style.backgroundImage = `url(${img.fileName})`;
+  itemDiv.style.width = '100%';
+
+  // 비율에 따라 padding-bottom을 설정
+  const aspectRatio = img.aspectRatio.split('/');
+  const height = (aspectRatio[1] / aspectRatio[0]) * 100;
+  itemDiv.style.paddingBottom = `${height}%`;
+
+  gridItem.appendChild(itemDiv);
+  galleryGrid.appendChild(gridItem);
+}

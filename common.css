@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: "SpoqaHanSansNeo-M";
-  src: url(./Public/fonts/SpoqaHanSansNeo-Medium.otf);
+  src: url(./public/fonts/SpoqaHanSansNeo-Medium.otf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CrimsonPro-R";
-  src: url(./Public/fonts/CrimsonPro-Regular.ttf);
+  src: url(./public/fonts/CrimsonPro-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "IropkeBatangM";
-  src: url(./Public/fonts/IropkeBatangM.woff);
+  src: url(./public/fonts/IropkeBatangM.woff);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PretendardVariable";
-  src: url(./Public/fonts/PretendardVariable.woff2);
+  src: url(./public/fonts/PretendardVariable.woff2);
   font-weight: normal;
   font-style: normal;
 }
@@ -38,7 +38,7 @@
 }
 
 .point {
-  color: #D28686;
+  color: #d28686;
 }
 
 .sidePadding {
@@ -54,7 +54,8 @@
   position: relative;
   padding: 0 15px;
 }
-body, html {
+body,
+html {
   position: relative;
   border: 1px solid red;
 }
@@ -75,20 +76,87 @@ body, html {
   color: #89757a;
 }
 
-
-html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   /* margin: 0; */
   /* padding: 0; */
   /* border: 0; */
@@ -97,14 +165,21 @@ html, body, div, span, applet, object, iframe,
   vertical-align: baseline;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
   padding: 0;
   font: inherit;
 }
 
-ul, li, ol {
-	list-style: none;
+ul,
+li,
+ol {
+  list-style: none;
   padding: 0;
   margin: 0;
 }

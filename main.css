@@ -53,9 +53,6 @@
 
 .swiper-slide img {
   display: block;
-  /* width: 100%; */
-  /* height: 100%; */
-  /* object-fit: cover; */
 }
 .swiper-pagination {
   background-color: transparent;
@@ -94,7 +91,7 @@ article .flower {
   height: 40px;
   margin-bottom: 20px;
   background-repeat: no-repeat;
-  background: url(./Public/imgs/icon_flower_00.png);
+  background: url(./public/imgs/icon_flower_00.png);
   background-size: cover;
 }
 
@@ -238,6 +235,7 @@ article .thx {
   display: inline;
 }
 .cardWrap {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   font-size: 10px !important;
@@ -256,6 +254,7 @@ article .thx {
 .cardWrap:not(:last-child)::after {
   position: absolute;
   top: 50%;
+  right: -80%;
   content: ":";
   margin: 0 20px;
   display: inline-flex;
@@ -276,39 +275,87 @@ article .thx {
 }
 
 /* 갤러리영역 */
-.galleryWrap {
-  margin: 1px 0;
-  /* padding: 25px 0; */
-}
-
-.galleryFlexContainer {
+.gallery-grid-container {
+  max-height: 500px;
   overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
 }
-.galleryFlex {
+
+.gallery-grid {
+  height: 100vh;
   display: grid;
-  max-height: 600px;
-  grid-auto-flow: column;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(11, auto);
+  gap: 10px;
 }
 
-.gridItem1 {
-  grid-row: 1 / span 2;
+.gallery-grid.grid2 {
+  margin: 0 32px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(11, auto);
 }
 
-.gridItem img {
-  display: block;
+.grid-item {
   width: 100%;
-  aspect-ratio: 16 / 20;
-  background-color: #eee;
-  background-position: 50% 50%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.item {
   background-size: cover;
-  border-style: solid;
-  border-color: #fbfbfb;
-  cursor: pointer;
-  background-color: #eee;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  border: 1px solid red;
+}
+
+/* 16:20 비율 */
+.item[data-aspect-ratio="16/20"] {
+  padding-bottom: calc(100% * (20 / 16));
+}
+/* 16:10 비율 */
+.item[data-aspect-ratio="16/10"] {
+  padding-bottom: calc(100% * (10 / 16));
+}
+.gallery-more-button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* 더보기버튼 */
+.gallery-more-button {
+  color: #978686;
+  border: 1px solid #d1c8c8;
+  padding: 4px 26px;
+  border-radius: 32px;
+}
+
+.gallery-more-button>div {
+  display: inline-block;
+  width: .333rem;
+  height: .333rem;
+  margin-right: 6px;
+  transform: translate(-50%) rotate(45deg);
+  animation: bounce 1.5s ease-in-out infinite;
+  border-bottom: 1px solid #978686;
+  border-right: 1px solid #978686;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-3px) translateX(-50%) rotate(45deg);
+  }
+}
+
+.gallery-more-button span {
+  font-size: .85rem;
+  margin-left: 10px;
+  color: #978686;
+  border-radius: 32px;
+  font-family: "IropkeBatangM";
 }
 
 /* 예식정보 및 안내사항 */
@@ -326,8 +373,8 @@ article .thx {
   border: 1px solid;
   width: 50%;
   color: #89757a;
-  filter: saturate(.8);
-  font-size: .9rem;
+  filter: saturate(0.8);
+  font-size: 0.9rem;
   border-radius: 8px 8px 0 0;
 }
 
@@ -346,7 +393,7 @@ article .thx {
   padding: 30px 10px;
   font-family: "IropkeBatangM";
   color: #544f4f;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 /* 방명록 */
@@ -374,7 +421,7 @@ article .thx {
   width: 100%;
   height: 250px;
   position: relative;
-  background: url("./Public/imgs/footerImg.jpg") no-repeat center center;
+  background: url("./public/imgs/footerImg.jpg") no-repeat center center;
   background-size: contain;
 }
 
